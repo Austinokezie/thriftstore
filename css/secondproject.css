@@ -1,0 +1,52 @@
+header{
+    background-image: url(../images/real-estate-buildings-in-modern-city.webp);
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+header::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+   
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+header .formContainer{
+  
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+}
+
+
+
+
+.formContainer form-group{
+    position: relative;
+    background: white;
+}
+
+footer{
+    background-color: #183153;
+    color: #fff;
+}
+footer .btn{
+    border-radius: 10%;
+}
+
+
+ 
+  
