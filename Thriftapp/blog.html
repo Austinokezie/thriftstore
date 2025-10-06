@@ -11,7 +11,7 @@
 </head>
 <body>
     <section id="header">
-        <a href="#"><img src="../img/logo_trial.png" class="logo" alt="Logo"></a>
+        <a href="#"><img src="../img/volandy-digital-high-resolution-logo-black.png" class="logo" alt="Logo"></a>
 
         <div>
             <ul id="navbar">
@@ -49,7 +49,7 @@
     </section>
 
     <section id="blog">
-      <div class="blog-box">
+      <div class="blog-box reveal">
         <div class="blog-img">
           <img src="../blog.img/bloggirl-2.jpg" alt="an image">
         </div>
@@ -61,7 +61,7 @@
         </div>
         <h1>13/01</h1>
       </div>
-      <div class="blog-box">
+      <div class="blog-box reveal">
         <div class="blog-img">
           <img src="../blog.img/bloggirl-3.webp" alt="an image">
         </div>
@@ -73,7 +73,7 @@
         </div>
         <h1>13/01</h1>
       </div>
-      <div class="blog-box">
+      <div class="blog-box reveal">
         <div class="blog-img">
           <img src="../blog.img/bloggirl-4.jpg" alt="an image">
         </div>
@@ -85,7 +85,7 @@
         </div>
         <h1>13/01</h1>
       </div>
-      <div class="blog-box">
+      <div class="blog-box reveal">
         <div class="blog-img">
           <img src="../blog.img/bloggirl-5.webp" alt="an image">
         </div>
@@ -97,7 +97,7 @@
         </div>
         <h1>13/01</h1>
       </div>
-      <div class="blog-box">
+      <div class="blog-box  reveal">
         <div class="blog-img">
           <img src="../blog.img/bloggirl-1.jpg" alt="an image">
         </div>
@@ -122,7 +122,7 @@
 
   </section>
 
-    <section id="newsletter" class="section-p1 section-m1">
+    <section id="newsletter" class="section-p1 section-m1  reveal">
         <div class="newstext">
             <h4>Sign up for Newsletters</h4>
             <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
@@ -176,7 +176,7 @@
         <div class="row mt-3">
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-3">
-            <img src="../img/logo_trial.png" alt="logo" style="width: 45%; height: auto;">
+            <img src="../img/volandy-digital-high-resolution-logo-black.png" alt="logo" style="width: 45%; height: auto;">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4 mt-3 ">Contact</h6>
             <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
@@ -261,7 +261,7 @@
     <!-- Copyright -->
     <div class="text-center p-4 mt-2 " >
       © 2024 Copyright:
-      <a class="text-reset fw-bold text-decoration-none " href="https://mdbootstrap.com/">Rubicon Digital</a>
+      <a class="text-reset fw-bold text-decoration-none " href="https://mdbootstrap.com/">Volandy Digital</a>
     </div>
     <!-- Copyright -->
     </footer>
@@ -273,5 +273,34 @@
     
 
     <script src="script.js"></script>
+
+    <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
+
+      function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+
+        for(var i = 0; i < reveals.length; i++){
+          var windowheight = window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint = 150;
+
+          if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+
+          }
+
+          else{
+            reveals[i].classList.remove('active');
+          }
+        }
+      }
+
+      
+
+    </script>
+
+
+
 </body>
 </html>

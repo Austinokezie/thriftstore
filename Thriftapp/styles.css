@@ -70,8 +70,8 @@ body{
 
 }
 #header img{
-    width: 14%;
-    height: auto;
+    width: 22%;
+    height: 100%;
 }
 #navbar{
     display: flex;
@@ -175,10 +175,12 @@ body{
 }
 #features .feature-box:nth-child(2) h6{
     background-color: #cdebbc;
+   
 
 }
 #features .feature-box:nth-child(3) h6{
     background-color: #d1e8f2;
+   
 
 }
 #features .feature-box:nth-child(4) h6{
@@ -196,6 +198,42 @@ body{
 .feature-box img{
     width: 90%;
     margin-bottom: 10px;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+#features .feature-box:nth-child(2){
+    transition-delay: 200ms;
+
+}
+#features .feature-box:nth-child(3){
+    transition-delay: 400ms;
+
+}
+#features .feature-box:nth-child(4){
+    transition-delay: 600ms;
+
+}
+#features .feature-box:nth-child(5){
+    transition-delay: 800ms;
+
+}
+#features .feature-box:nth-child(6){
+    transition-delay: 1000ms;
+
 }
 #product1{
     text-align: center;
@@ -265,6 +303,17 @@ body{
     bottom: 10px;
     right: 10px;
 
+}
+.pro .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+
+}
+.pro .reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all 1.8s ease;
 }
 #banner{
     display: flex;
@@ -615,15 +664,28 @@ footer a:hover{
     object-fit: contain;
 
 }
+
 #blog{
     padding: 15px 150px 0 150px;
 }
+
 #blog .blog-box{
     display: flex;
     align-items: center;
     width: 100%;
     position: relative;
     padding-bottom: 90px ;
+}
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all 1.8s ease;
 }
 #blog .blog-img{
     width: 50%;
